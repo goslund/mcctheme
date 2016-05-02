@@ -1,0 +1,41 @@
+{
+    "uid": "mcctheme",
+    "name": "base theme for MCC pages",
+    "description": "a set of base components for mcc websites",
+    "version": "0.2.1",
+    "pb_version": "0.5.x",
+    "author": {
+        "name": "PencilBlue",
+        "email": "info@pencilblue.org",
+        "website": "http://pencilblue.org",
+        "contributors": [
+            {
+                "name": "Blake Callens",
+                "email": ""
+            },
+            {
+                "name": "Brian Hyder",
+                "email": ""
+            }
+        ]
+    },
+    "settings": [
+        
+    ],
+    "permissions": {
+        "ACCESS_USER": [],
+        "ACCESS_WRITER": [],
+        "ACCESS_EDITOR": [],
+        "ACCESS_MANAGING_EDITOR": []
+    },
+    "main_module": {
+        "path": "mcctheme.js"
+    },
+    "dependencies": {
+        "async": "0.9.0"
+    },
+    "theme": {
+        "settings": [],
+        "content_templates": []
+    }
+}

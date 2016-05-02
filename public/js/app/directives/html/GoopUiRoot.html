@@ -1,0 +1,13 @@
+<div id="wrap">
+    <goop-ui-spacer id="spacer" state="state"></goop-ui-spacer>
+    <goop-ui-site-header layout="row" layout-align="center" id="site-header" state="state">
+        <div flex="60">
+            <h2 id="headline">Bipolar Transitions</h2>
+        </div>
+    </goop-ui-site-header>
+    <goop-ui-main-window layout="row" layout-align="center" id="main-window" state="state" faded="faded" ng-transclude>
+        <div ui-view="topView" flex flex-xs="100" flex-sm="95" flex-md="85" flex-gt-md="80" layout="row" class="topViewContainer">
+        </div>
+    </goop-ui-main-window>
+    <goop-ui-footer layout-align="center" layout="row" id="footer-window" state="state"></goop-ui-footer>
+</div>

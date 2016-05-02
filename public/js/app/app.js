@@ -1,0 +1,1 @@
+angular.module('mccTheme', ['ngResource', 'goopUi', 'goopMenuElement', 'goopAnimations', 'ui.router', 'ct.ui.router.extras', 'ngAria', 'ngMaterial']);
