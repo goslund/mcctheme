@@ -1,3 +1,3 @@
 # mcctheme
 
-## Basic AngularJS/Pencilblue Single Page App theme
+### Basic AngularJS/Pencilblue Single Page App theme
