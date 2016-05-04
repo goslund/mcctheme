@@ -1,24 +1,24 @@
-<md-fab-toolbar ng-if="fabNav" md-open="navOpen" md-direction="right">
-    <md-fab-trigger class="align-with-text">
-        <md-button aria-label="menu" class="md-fab md-primary">
-            <!-- <md-icon md-svg-src="img/icons/menu.svg"></md-icon> -->
-        </md-button>
-    </md-fab-trigger>
-    <md-toolbar>
-        <md-fab-actions class="md-toolbar-tools">
-            <md-button ui-sref-active="md-accent md-hue-1" ui-sref="main.home" class="md-primary">Home</md-button>
-            <md-button ng-repeat="item in menudata.children | filter: homeFilter" ui-sref-active="md-accent md-hue-1" ui-sref="main.{{item.type}}({pageSlug: item.slug, _id: item._id})" data-id="{{item._id}}" class="md-button">{{item.name}}</md-button>
-        </md-fab-actions>
-    </md-toolbar>
-</md-fab-toolbar>
-<ul ng-if="!fabNav" class="topNav">
+<ul ng-if="size != 'xs'" class="topNav">
     <li>
-        <md-button ui-sref-active="active" ui-sref="main.home">Home</md-button>
+        <md-button class="md-raised" ui-sref-active="active" ui-sref="main.home">Home</md-button>
     </li>
     <li ng-repeat="item in menudata.children | filter: homeFilter">
-        <md-button ui-sref-active="active" ui-sref="main.{{item.type}}({pageSlug: item.slug, _id: item._id})" data-id="{{item._id}}" class="md-button">{{item.name}}</md-button>
+        <md-button class="md-raised" ui-sref-active="active" ui-sref="main.{{item.type}}({pageSlug: item.slug, id: item})" data-id="{{item._id}}">{{item.name}}</md-button>
     </li>
 </ul>
+<md-menu ng-if="size == 'xs'">
+    <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </md-button>
+    <md-menu-content width="4">
+        <md-menu-item>
+            <md-button class="md-raised" ui-sref-active="active" ui-sref="main.home">Home</md-button>
+        </md-menu-item>
+        <md-menu-item ng-repeat="item in menudata.children | filter: homeFilter">
+            <md-button class="md-raised" ui-sref-active="active" ui-sref="main.{{item.type}}({pageSlug: item.slug, id: item})" data-id="{{item._id}}">{{item.name}}</md-button>
+        </md-menu-item>
+    </md-menu-content>
+</md-menu>
 <!-- 
     <md-button ui-sref="main.intro" class="">About Me</md-button>
     <md-button ui-sref="main.rates" class="">Rates</md-button>

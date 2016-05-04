@@ -25,16 +25,20 @@
 
 	                console.log("mcc theme menu", promise);
 
+	                $scope.openMenu = function($mdOpenMenu, ev) {
+	                    originatorEv = ev;
+	                    $mdOpenMenu(ev);
+	                };
+
 	                $scope.$watch(function() {
 	                    return $window.innerWidth;
 	                }, function(value) {
-	                	if(value < 600) {
-	                		$scope.fabNav = true;
-	                		$scope.size = 'xs';
-	                	} else {
-	                		$scope.fabNav = false;
-	                		
-	                	}
+	                    if (value < 600) {
+	                        $scope.size = 'xs';
+	                    } else {
+	                        $scope.size = 'gt-xs';
+
+	                    }
 	                    console.log(value);
 	                });
 
